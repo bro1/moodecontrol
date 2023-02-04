@@ -115,10 +115,39 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () { playRNZNews(context, mpdHost, "ZM", "http://ais-nzme.streamguys1.com/nz_008/playlist.m3u8") ;
             }),
 
-            ElevatedButton(
-                child: Text('Stop playing'),
-                onPressed: () { stopPlaying(context, mpdHost) ;
-                }),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    child: Text('Stop'),
+                    onPressed: () { stopPlaying(context, mpdHost) ;
+                    }),
+              ElevatedButton(
+                  child: Text('Vol 5'),
+                  onPressed: () { setVolume(context, mpdHost, 50) ;
+                  }),
+
+              ElevatedButton(
+                  child: Text('Vol 7'),
+                  onPressed: () { setVolume(context, mpdHost, 70) ;
+                  }),
+
+              ElevatedButton(
+                  child: Text('Vol 8'),
+                  onPressed: () { setVolume(context, mpdHost, 80) ;
+                  }),
+
+
+              ElevatedButton(
+                  child: Text('Vol 10'),
+                  onPressed: () { setVolume(context, mpdHost, 100) ;
+                  }),
+
+            ],)
+
+
+
 
 
           ],
@@ -192,8 +221,18 @@ void stopPlaying(BuildContext context, String mpdHost) async {
       if (zc.statusCode != 200) {
         snack(context, "Could not clear Moode queue");
       }
+}
+
+
+void setVolume(BuildContext context, String mpdHost, int vol) async {
+
+  var zc = await http.get(Uri.parse("http://${mpdHost}/command?cmd=vol.sh ${vol}"));
+  if (zc.statusCode != 200) {
+    snack(context, "Could not set volume to $vol");
+  }
 
 }
+
 
 
 
