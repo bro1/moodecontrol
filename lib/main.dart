@@ -100,13 +100,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
+
+        Wrap(
+          alignment: WrapAlignment.spaceEvenly,
+          children: [
+
             ElevatedButton(
-                child: Text('ALT 101'),
-                onPressed: () { playRNZNews(context, mpdHost, "ALT 101", "http://stream.revma.ihrhls.com/zc7779");
+                child: Text('ALT 101.1'),
+                onPressed: () { playRNZNews(context, mpdHost, "ALT 101.1", "https://stream.revma.ihrhls.com/zc7870");
                 }),
 
             ElevatedButton(
-                child: Text('ALT 98.7'),
+                child: Text('ALT98.7'),
                 onPressed: () { playRNZNews(context, mpdHost, "ALT 98.7", "http://stream.revma.ihrhls.com/zc201");
                 }),
 
@@ -114,7 +120,18 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('ZM'),
               onPressed: () { playRNZNews(context, mpdHost, "ZM", "http://ais-nzme.streamguys1.com/nz_008/playlist.m3u8") ;
             }),
+            ElevatedButton(
+                child: Text('Brian FM'),
+                onPressed: () { playRNZNews(context, mpdHost, "Brian FM Malborough", "https://ais-sa1.streamon.fm/7103_128k.aac") ;
+                }),
 
+            ElevatedButton(
+                child: Text('jjj'),
+                onPressed: () { playRNZNews(context, mpdHost, "jjj", "http://live-radio01.mediahubaustralia.com/2TJW/aac/") ;
+                }),
+
+
+  ]),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
