@@ -117,6 +117,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 }),
 
             ElevatedButton(
+                child: Text('ALT97.5 Austin'),
+                onPressed: () { playRNZNews(context, mpdHost, "ALT 97.5 Austin", "https://stream.revma.ihrhls.com/zc7053");
+                }),
+
+            ElevatedButton(
               child: Text('ZM'),
               onPressed: () { playRNZNews(context, mpdHost, "ZM", "http://ais-nzme.streamguys1.com/nz_008/playlist.m3u8") ;
             }),
