@@ -129,6 +129,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text('Brian FM'),
                 onPressed: () { playRNZNews(context, mpdHost, "Brian FM Malborough", "https://ais-sa1.streamon.fm/7103_128k.aac") ;
                 }),
+            ElevatedButton(
+                child: Text('RNZ'),
+                onPressed: () { playRNZNews(context, mpdHost, "RNZ National", "http://radionz-ice.streamguys.com/national.mp3") ;
+                }),
 
             ElevatedButton(
                 child: Text('jjj'),
