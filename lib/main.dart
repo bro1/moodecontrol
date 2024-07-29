@@ -107,17 +107,17 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
 
             ElevatedButton(
-                child: Text('ALT 101.1'),
-                onPressed: () { playRNZNews(context, mpdHost, "ALT 101.1", "https://stream.revma.ihrhls.com/zc7870");
+                child: Text('ALT 102.3 (Portland)'),
+                onPressed: () { playRNZNews(context, mpdHost, "ALT 102.3 (Portland)", "https://stream.revma.ihrhls.com/zc6384");
                 }),
 
             ElevatedButton(
-                child: Text('ALT98.7'),
-                onPressed: () { playRNZNews(context, mpdHost, "ALT 98.7", "http://stream.revma.ihrhls.com/zc201");
+                child: Text('ALT 98.7 (LA)'),
+                onPressed: () { playRNZNews(context, mpdHost, "ALT 98.7 (LA)", "http://stream.revma.ihrhls.com/zc201");
                 }),
 
             ElevatedButton(
-                child: Text('ALT97.5 Austin'),
+                child: Text('ALT 97.5 Austin'),
                 onPressed: () { playRNZNews(context, mpdHost, "ALT 97.5 Austin", "https://stream.revma.ihrhls.com/zc7053");
                 }),
 
