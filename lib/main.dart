@@ -139,8 +139,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () { playRNZNews(context, mpdHost, "jjj", "http://live-radio01.mediahubaustralia.com/2TJW/aac/") ;
                 }),
 
+            ElevatedButton(
+                child: Text('local'),
+                onPressed: () { playRNZNews(context, mpdHost, "local", "linas-good") ;
+                }),
 
-  ]),
+
+          ]),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -213,7 +218,13 @@ void playURL(String url, String mpdHost, BuildContext context) async {
     snack(context, "Could not clear Moode queue");
   }
 
-  var url1 = "http://${mpdHost}/command?cmd=add%20${url}";
+  var url1 = "";
+  if (url.startsWith("http")) {
+    url1 = "http://${mpdHost}/command?cmd=add%20${url}";
+  } else {
+    url1 = "http://${mpdHost}/command?cmd=load%20${url}";
+  }
+
   var z = await http.get(Uri.parse(url1));
   if (z.statusCode == 200) {
     var pl = await http.get(Uri.parse("http://${mpdHost}/command?cmd=play"));
