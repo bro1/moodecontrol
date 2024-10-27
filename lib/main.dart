@@ -123,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             ElevatedButton(
               child: Text('ZM'),
-              onPressed: () { playRNZNews(context, mpdHost, "ZM", "http://ais-nzme.streamguys1.com/nz_008/playlist.m3u8") ;
+              onPressed: () { playRNZNews(context, mpdHost, "ZM WLG", "http://playerservices.streamtheworld.com/api/livestream-redirect/NZME_33AAC.m3u8") ;
             }),
             ElevatedButton(
                 child: Text('Brian FM'),

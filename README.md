@@ -2,15 +2,18 @@
 
 A new Flutter project.
 
-## Getting Started
+# How to find the stream for a radio station on iHeartRadio? 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+https://nz.api.iheart.com/api/v2/content/liveStations/9557
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+In the response there is list of URLs:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+{
+"streams": {
+"hls_stream": "http://playerservices.streamtheworld.com/api/livestream-redirect/NZME_33AAC.m3u8",
+"shoutcast_stream": "http://playerservices.streamtheworld.com/api/livestream-redirect/NZME_33AAC.aac",
+"secure_hls_stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_33AAC.m3u8",
+"secure_shoutcast_stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_33AAC.aac"
+}
+}
